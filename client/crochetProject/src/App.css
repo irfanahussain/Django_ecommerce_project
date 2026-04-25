@@ -1,0 +1,165 @@
+#root {
+  max-width: 100%;
+  margin: 0;
+  text-align: left; 
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #262b8faa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #831f1f;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #f8c291;
+  white-space: nowrap;
+  padding: 3px 0;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-scroll 15s linear infinite;
+  font-weight: bold;
+  color: #292602;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* 2. Announcement Bar (The orange bar in your photo) */
+.announcement-bar {
+  background-color: #662518 !important; /* Softer coral pink */
+  color: #a84a4a;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border: none;
+}
+
+/* 3. Typography Refresh */
+h1, h2, .navbar-brand {
+  font-family: 'Playfair Display', serif; /* Elegant Serif for titles */
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-dark);
+  margin-top: 10px;
+  display: block;
+}
+
+/* 4. The Product Cards (Pinterest/Boutique Style) */
+.card {
+  border: none !important;
+  border-radius: 20px !important; /* Rounder corners for 'soft' feel */
+  background: #2d4d8d;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 15px 30px rgba(204, 104, 104, 0.08);
+}
+
+.card-img-top {
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.03); /* Subtle zoom in */
+}
+
+/* 5. Rating and Price Styling */
+.rating-text {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 5px 0;
+}
+
+/* 6. Buttons */
+.btn-primary {
+  background-color: var() !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 10px 25px !important;
+  font-weight: 600 !important;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* 7. Masonry Grid Logic (Pinterest Style) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+
+
+.nav-link {
+    color: #6c757d; /* Gray for disabled steps */
+    font-weight: 500;
+}
+
+.nav-link.active {
+    color: #f1b819 !important; /* Pastel pink for active steps */
+    border-bottom: 2px solid #a18f5e;
+}
+
+.nav-link.disabled {
+    color: #979070 !important;
+}
